@@ -145,40 +145,41 @@ const Home = () => {
       </Grid>
 
       {/* Indicadores */}
-      <Box
-        sx={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gap: 2,
-          mt: 2,
-        }}
-      >
-        <Indicador
-          icone={
-            <AssignmentSharpIcon sx={{ fontSize: 20, color: "#1e88e5" }} />
-          }
-          titulo="Total de Tarefas"
-          contador={total}
-        />
+      <Grid container spacing={2} sx={{ mt: 2 }}>
+        <Grid size={{ xs: 6, md: 3 }}>
+          <Indicador
+            icone={
+              <AssignmentSharpIcon sx={{ fontSize: 20, color: "#1e88e5" }} />
+            }
+            titulo="Total de Tarefas"
+            contador={total}
+          />
+        </Grid>
 
-        <Indicador
-          icone={<ScheduleIcon sx={{ fontSize: 20, color: "#FF6F61" }} />}
-          titulo="Ativas"
-          contador={ativas}
-        />
+        <Grid size={{ xs: 6, md: 3 }}>
+          <Indicador
+            icone={<ScheduleIcon sx={{ fontSize: 20, color: "#FF6F61" }} />}
+            titulo="Ativas"
+            contador={ativas}
+          />
+        </Grid>
 
-        <Indicador
-          icone={<TaskAltIcon sx={{ fontSize: 20, color: "#80DE95" }} />}
-          titulo="Concluídas"
-          contador={concluidas}
-        />
+        <Grid size={{ xs: 6, md: 3 }}>
+          <Indicador
+            icone={<TaskAltIcon sx={{ fontSize: 20, color: "#80DE95" }} />}
+            titulo="Concluídas"
+            contador={concluidas}
+          />
+        </Grid>
 
-        <Indicador
-          icone={<TrendingUpIcon sx={{ fontSize: 20, color: "#6a1b9a" }} />}
-          titulo="Taxa de Conclusão"
-          contador={`${taxa}%`}
-        />
-      </Box>
+        <Grid size={{ xs: 6, md: 3 }}>
+          <Indicador
+            icone={<TrendingUpIcon sx={{ fontSize: 20, color: "#6a1b9a" }} />}
+            titulo="Taxa de Conclusão"
+            contador={`${taxa}%`}
+          />
+        </Grid>
+      </Grid>
 
       {/* Filtros */}
       <Grid container sx={{ background: "#121212", mt: 3, borderRadius: 2 }}>
